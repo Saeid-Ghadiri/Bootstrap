@@ -1,0 +1,116 @@
+﻿@page
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<title>آموزش bootstrap</title>
+
+	<link rel="icon" href="~/favicon.ico" />
+	<link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.css" />
+	<link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.rtl.css" />
+	<link rel="stylesheet" href="~/lib/bootstrap-icons/font/bootstrap-icons.min.css" />
+
+	@*<link rel="stylesheet" href="~/css/styleother.css" />*@
+</head>
+<!-- Body Start -->
+
+<body>
+	<!-- Begin Start -->
+	<div class="container-fluid">
+		<!-- Login Page -->
+		<div class="container text-center m-3">
+			<div class="row">
+				<!-- Section Forms -->
+				<div class="col-lg-4 rounded-start bg-danger">
+					<form method="post" dir="ltr">
+						@* <legend>
+						@(pageTitle)
+						</legend> *@
+
+						<div class="mb-3">
+							<label @*asp-for="ViewModel.Username"*@ class="form-label"></label>
+
+							<div class="input-group" >
+								<div class="input-group-text" dir="ltr">
+									<i class="bi bi-person-fill"></i>
+								</div>
+								<input @*asp-for="ViewModel.Username"*@ class="form-control" />
+							</div>
+
+							<span @*asp-validation-for="ViewModel.Username"*@ class="text-danger"></span>
+						</div>
+
+						<div class="mb-3">
+							<label @*asp-for="ViewModel.Password"*@ class="form-label"></label>
+
+							<div class="input-group">
+								<div class="input-group-text">
+									<i class="bi bi-lock-fill"></i>
+								</div>
+								<input @*asp-for="ViewModel.Password"*@ class="form-control" />
+							</div>
+
+							<span @*asp-validation-for="ViewModel.Password"*@ class="text-danger"></span>
+						</div>
+
+						<div class="mb-3">
+							<div class="form-check">
+								<input @*asp-for="ViewModel.RememberMe"*@ class="form-check-input" />
+								<label @*asp-for="ViewModel.RememberMe"*@ class="form-check-label"></label>
+
+							</div>
+						</div>
+
+						<div class="mb-3">
+							<button type="submit" class="btn btn-primary">Login</button>
+							<button type="reset" class="btn btn-secondary">Reset</button>
+						</div>
+
+						<hr class="mt-4" />
+
+						<div class="text-center">
+							<a href="#">Forgot Username</a>
+							|
+							<a href="#">Forgot Password</a>
+							|
+							<a href="#">Register</a>
+							|
+							<a href="#">Home</a>
+						</div>
+						<br />
+
+					</form>
+				</div>
+				<!-- Section Images And Text -->
+
+				<div class="col-lg-8 rounded-end bg-info">
+					<img src="" alt="" />
+					<p class="p-2">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+						labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+						laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+						voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+						cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+				</div>
+			</div>
+		</div>
+		<!-- Login Page -->
+	</div>
+	<!-- End Begin -->
+	<!-- JS Files Start -->
+	<script src="~/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="~/lib/bootstrap/js/bootstrap.min.js"></script>
+	<script src="~/lib/jquery/jquery.min.js"></script>
+	<script src="~/lib/jquery-validate/localization/messages_fa.min.js"></script>
+	@*<script src="~/lib/jquery-validate/jquery.validate.min.js"></script>*@
+	@*<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>*@
+	@*<script src="~/lib/tinymce/tinymce.min.js"></script>*@
+	<!-- End JS Files -->
+</body>
+<!-- End Body -->
+</html>

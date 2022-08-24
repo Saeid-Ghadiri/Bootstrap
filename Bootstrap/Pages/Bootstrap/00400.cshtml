@@ -1,0 +1,146 @@
+﻿@page
+
+<!DOCTYPE html>
+<html lang="en-US" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>آموزش bootstrap</title>
+
+    <link rel="icon" href="~/favicon.ico" />
+    <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.css" />
+    @*<link rel="stylesheet" href="~/css/style.css" />*@
+    <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.rtl.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap-icons/font/bootstrap-icons.min.css" />
+</head>
+<!-- Body Start -->
+<body>
+    <!-- Begin Start -->
+    <div class="container">
+
+        <!-- Topbar Start -->
+
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+
+            <div class="d-flex align-items-center">
+                <a class="navbar-brand display-2" href="a">پنل مدیریت محتوا</a>
+                <i class="bi bi-caret-left-fill h4 text-secondary" style="cursor: pointer;"></i>
+            </div>
+
+            <button class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle Navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse mr-3" id="navbarSupportedContent">
+
+                <nav class="navbar-nav">
+
+                    <ul class="navbar-nav mr-auto">
+
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-speedometer2 text-success"></i>
+                                پیشخوان
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-person-circle text-info"></i>
+                                کاربران
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-gear-fill text-danger"></i>
+                                تنظیمات
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+
+                <nav class="navbar-nav">
+
+@*                    <button type="button" class="btn btn-light position-relative mr-2">
+                        <i class="bi bi-bell-fill"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            99+
+                            <span class="visually-hidden">new notifications</span>
+                        </span>
+                    </button>
+
+                    <button type="button" class="btn btn-light position-relative mr-2">
+                        <i class="bi bi-card-list"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            99+
+                            <span class="visually-hidden">new notifications</span>
+                        </span>
+                    </button>
+
+                    <button type="button" class="btn btn-light position-relative mr-2">
+                        <i class="bi bi-chat-left-dots-fill"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            99+
+                            <span class="visually-hidden">new notifications</span>
+                        </span>
+                    </button>*@
+
+                    <ul class="navbar-nav mr-auto">
+
+                        <li class="nav-item position-relative dropdown">
+                        <a class="nav-link" href="#">
+                        @*<span class="badge rounded-pill text-bg-warning">5</span>*@
+                        <span class="position-absolute top-15 bottom-48 translate-middle badge rounded-pill text-bg-danger">5</span>
+                        <i class="bi bi-bell-fill"></i>
+                        </a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                        <a class="nav-link" href="#">
+                        <span class="badge badge-pill bg-dark">5</span>
+                        <i class="bi bi-card-list"></i>
+                        </a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                        <a class="nav-link" href="#">
+                        <span class="badge badge-pill bg-danger">5</span>
+                        <i class="bi bi-chat-left-dots-fill"></i>
+                        </a>
+                        </li>
+                        <li class="nav-item mr-2">
+                            <a class="nav-link" href="#">
+                                <img class="d-inline-block align-top"
+                                     src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg"
+                                     width="30"
+                                     height="30"
+                                     alt="">
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </nav>
+            </div>
+        </nav>
+        <!-- End Topbar -->
+    </div>
+    <!-- Begin Start -->
+</body>
+<!-- End Body -->
+</html>
+
+
+@*            <div class="d-flex align-items-center">
+                <a class="navbar-brand display-2" href="a">پنل مدیریت محتوا</a>
+                <i class="bi bi-caret-left-fill h4 text-secondary" style="cursor: pointer;"></i>
+            </div>*@

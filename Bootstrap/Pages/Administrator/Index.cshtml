@@ -1,0 +1,14 @@
+﻿@page
+@model Bootstrap.Pages.Administrator.IndexModel
+@{
+	if (Model == null)
+	{
+		return;
+	}
+
+	Layout = "Layouts/_LayoutFileManager";
+}
+
+<h5>
+	Current Path: @(Model.CurrentPath)
+</h5>

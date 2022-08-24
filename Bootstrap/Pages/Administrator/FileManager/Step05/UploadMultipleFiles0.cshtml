@@ -1,0 +1,61 @@
+﻿@page
+@model Bootstrap.Pages.Administrator.FileManager.Step05.UploadMultipleFiles0
+
+@{
+	Layout =
+		"Layouts/_LayoutFileManager";
+
+	ViewData["PageTitle"] =
+		"Upload Multiple Files (0)";
+}
+
+<form method="post" enctype="multipart/form-data">
+
+	<div class="row">
+		<div class="col-12 p-3 col-md-8 offset-md-2 p-md-5 bg-light border border-2 rounded-3 shadow-lg">
+			<legend>
+				Upload File (Note: Multiple)
+			</legend>
+
+			<hr />
+
+			<div class="mb-3">
+				<label for="file" class="form-label">Select Files</label>
+				<input type="file" id="files" name="files" class="form-control" aria-label="Select Files" multiple />
+			</div>
+
+			<div class="mb-3">
+				<div class="form-check">
+					<input type="checkbox" id="overwriteIfFileExists" name="overwriteIfFileExists" value="true" class="form-check-input" aria-label="Override If File Exists" />
+					<label for="overwriteIfFileExists" class="form-check-label">Overwrite If File Exists</label>
+				</div>
+			</div>
+
+			<button type="submit" class="btn btn-primary">Upload Files</button>
+			<button type="reset" class="btn btn-secondary">Reset</button>
+		</div>
+	</div>
+
+</form>
+
+@section Scripts
+{
+<script>
+
+	$(function() {
+
+		$('form').submit(function (e) {
+
+			if ($(this).valid()) {
+
+				$('button').prop('disabled', true)
+				$('input[type=button]').prop('disabled', true)
+
+			}
+
+		})
+
+	})
+
+</script>
+}

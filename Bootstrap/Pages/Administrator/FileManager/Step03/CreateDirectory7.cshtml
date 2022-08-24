@@ -1,0 +1,73 @@
+﻿@page
+@model Bootstrap.Pages.Administrator.FileManager.Step03.CreateDirectoryModel7
+
+@{
+	ViewData["PageTitle"] =
+		"Create Directory (7)";
+
+	Layout = "Layouts/_LayoutFileManager";
+}
+
+<form method="post">
+
+	<div class="row">
+		<div class="col-12 p-3 col-md-8 offset-md-2 p-md-5 bg-light border border-2 rounded-3 shadow-lg">
+			<legend>
+				Create Directory
+			</legend>
+
+			<hr />
+
+			<partial name="PartialViews/_DisplayPageMessages" />
+
+			<div class="mb-3">
+				<label asp-for="ViewModel.DirectoryName" class="form-label"></label>
+				<input asp-for="ViewModel.DirectoryName" class="form-control" />
+				<span asp-validation-for="ViewModel.DirectoryName" class="text-danger"></span>
+			</div>
+
+			<button type="submit" class="btn btn-primary">Create</button>
+			<button type="reset" class="btn btn-secondary">Reset</button>
+		</div>
+	</div>
+
+</form>
+
+@section Scripts
+{
+<script>
+
+	//$(document).ready(function() {
+
+	//	console.log( "ready (1)!" )
+
+	//})
+
+	//$(function() {
+
+	//	console.log( "ready (2)!" )
+
+	//})
+
+	$(function() {
+
+		$('form').submit(function (e) {
+
+			if ($(this).valid()) {
+
+				// JQuery در نسخه‌های قدیمی
+				//$('button').attr('disabled', 'disabled')
+				//$('input[type=button]').attr('disabled', 'disabled')
+
+				// JQuery در نسخه‌های جدید
+				$('button').prop('disabled', true)
+				$('input[type=button]').prop('disabled', true)
+
+			}
+
+		})
+
+	})
+
+</script>
+}
